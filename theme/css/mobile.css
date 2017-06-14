@@ -1,0 +1,30 @@
+
+/*
+* style for mobile
+*/
+@media screen and (max-width:767px) {
+/* modify other style */
+.web-logo {
+	line-height: 60px;
+	background-position: center;
+	margin: 0;
+}
+.home-review li { width: 16.6666%; }
+.thread-details-mobileLeft,
+.thread-details-mobileRight { line-height: 150px; }
+.thread-details-padding { padding: 5px; }
+.tapchi-other-margin {
+	padding-top: 10px;
+	padding-left: 0;
+}
+.bottom-header {
+	height: auto;
+	overflow: auto;
+	margin: 15px 0;
+	text-align: left;
+}
+.thread-details-tab li { padding: 0 15px; }
+.thread-details-giamgia { padding: 0 10px 0 0; }
+.thread-details-giamgia div { padding-left: 70px; }
+.thread-details-giamgia span { padding: 3px 10px; }
+}

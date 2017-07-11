@@ -10,8 +10,6 @@
 	margin: 0;
 }
 .home-review li { width: 16.6666%; }
-.thread-details-mobileLeft,
-.thread-details-mobileRight { line-height: 150px; }
 .thread-details-padding { padding: 5px; }
 .tapchi-other-margin {
 	padding-top: 10px;

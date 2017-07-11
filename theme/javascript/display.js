@@ -3,41 +3,12 @@
 
 
 
-//
-$('#nav ul, #nav li').removeAttr('id');
-$('#nav_right').html( $('#nav').html() );
-$('.bottom-nav a').after(',');
-
-
-
-
 /*
 * global function
 */
 // for home
 if ( act == '' ) {
 	___eb_global_home_runing( function () {
-		
-		//
-		$('.home-tab-congtrinh a').click(function () {
-			$('.home-tab-congtrinh a, .home-tab-content ul').removeClass('selected');
-			$(this).addClass('selected');
-			
-			//
-			var a = $(this).attr('data-id') || '';
-			if ( a != '' ) {
-				$('.home-tab-content ul#' + a).addClass('selected');
-			}
-			
-			//
-			_global_js_eb.auto_margin();
-			
-			return false;
-		});
-		
-		$('.home-tab-congtrinh a:first').click();
-		
-		
 		
 		//
 		/*

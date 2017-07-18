@@ -22,6 +22,7 @@
 	background: #da1818;
 	line-height: 50px;
 }
+/*
 .nav-menu {
 	line-height: 35px;
 	text-transform: uppercase;
@@ -42,6 +43,7 @@
 	text-transform: none;
 }
 .nav-menu .sub-menu a { color: #000; }
+*/
 /*
 .nav-menu .sub-menu {
 	border-left: rgba(199, 199, 199, 0.34) thin solid;
@@ -56,9 +58,11 @@
 	display: block;
 }
 */
+/*
 .nav-menu li { display: none; }
 .nav-menu li.selected,
 .nav-menu li.selected .sub-menu li { display: block; }
+*/
 .eb-sidebar-global-css ul.menu {
 	background: #347b1b;
 	text-transform: uppercase;

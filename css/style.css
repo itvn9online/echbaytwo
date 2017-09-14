@@ -100,7 +100,8 @@
 .details-other-title a { color: #333; }
 .details-other-title:before {
 	position: absolute;
-	width: 250px;
+	width: 50%;
+	max-width: 250px;
 	border: 0 none;
 	border-bottom: 3px #e74c0c solid;
 	bottom: -3px;
@@ -223,9 +224,10 @@
 	color: #444;
 }
 .thread-module-name {
-	line-height: 40px;
+	line-height: 21px;
 	border-bottom: 1px #333 solid;
 	margin-bottom: 20px;
+	padding: 0 0 10px 0;
 }
 .mua-button {
 	height: 40px;

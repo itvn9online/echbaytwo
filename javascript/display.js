@@ -58,37 +58,7 @@ else if ( act == 'archive' ) {
 
 // for details
 else if ( act == 'single' ) {
-	
-	//
-	if ( switch_taxonomy == 'post' ) {
-		
-		/*
-		* Các function hỗ trợ sẵn sẽ được gọi từ function cha, nếu không muốn dùng cái nào thì comment nó lại
-		*/
-		___eb_details_post_run( function () {
-			
-			//___eb_details_countdown();
-			___eb_details_excerpt_html();
-			//___eb_details_product_rating();
-			___eb_details_product_tab();
-			
-			//
-			$('form[name="frm_cart"] textarea[name="t_diachi"]').attr({
-				placeholder : 'Địa chỉ'
-			});
-			$('form[name="frm_cart"] textarea[name="t_ghichu"]').attr({
-				placeholder : 'Ghi chú'
-			});
-//			$('form[name="frm_cart"] button[type="submit"]').html('<i class="fa fa-file-text-o"></i> Đăng ký tư vấn');
-			
-		});
-		
-	}
-	else {
-		___eb_global_blog_details_runing( function () {
-		});
-	}
-	
+	WGR_for_post_details();
 }
 // end details
 

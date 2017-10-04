@@ -5,7 +5,6 @@
 /*
 function eb_details_for_current_domain () {
 	
-	global $func;
 	
 	
 	//

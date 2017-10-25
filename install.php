@@ -47,7 +47,7 @@ function WGR_install_load_form_get_ftp_account( $ftp_server, $ftp_user_name, $ft
 			</tr>
 			<tr>
 				<td>FTP Password</td>
-				<td><input type="text" name="ftp_pass" value="<?php echo $ftp_user_pass; ?>" /></td>
+				<td><input type="text" name="ftp_pass" value="" placeholder="<?php echo $ftp_user_pass; ?>" /></td>
 			</tr>
 			<tr>
 				<td align="center" colspan="2"><button type="submit">Download and Install Echbaydotcom plugin</button></td>

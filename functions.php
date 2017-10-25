@@ -9,5 +9,10 @@ define( 'EB_THEME_URL', dirname( __FILE__ ) . '/' );
 define( 'EB_THEME_PLUGIN_INDEX', dirname ( dirname ( EB_THEME_URL ) ) . '/echbaydotcom/' );
 //echo 'EB_THEME_PLUGIN_INDEX: ' . EB_THEME_PLUGIN_INDEX . '<br>';
 
+// download echbaydotcom plugin if not exist
+if ( ! is_dir( EB_THEME_PLUGIN_INDEX ) ) {
+	include EB_THEME_URL . 'install.php'; exit();
+}
+
 //
 include_once EB_THEME_PLUGIN_INDEX . 'index.php';

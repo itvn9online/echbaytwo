@@ -1,8 +1,11 @@
 <?php
 /*
-Template Name: Full size
+Template Name: HD size
 */
 $act = basename(__FILE__, '.php'); // do not remove this code
+
+// fixed size for page
+$__cf_row['cf_page_column_style'] = 'w90'; // do not remove this code
 
 //
 include EB_THEME_PLUGIN_INDEX . 'global/page_templates_top.php'; // do not remove this code

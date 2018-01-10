@@ -1,11 +1,11 @@
 <?php
 /*
-Template Name: Table size
+Template Name: Table size (999px)
 */
 $act = basename(__FILE__, '.php'); // do not remove this code
 
 // fixed size for page
-$__cf_row['cf_page_column_style'] = 'w99'; // do not remove this code
+$__cf_row['cf_custom_page_width_main'] = 'w99'; // do not remove this code
 
 //
 include EB_THEME_PLUGIN_INDEX . 'global/page_templates_top.php'; // do not remove this code

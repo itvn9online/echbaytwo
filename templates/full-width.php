@@ -11,7 +11,7 @@ include EB_THEME_PLUGIN_INDEX . 'global/page_templates_top.php'; // do not remov
 * BEGIN Custom code
 */
 ?>
-<h1 class="page-details-title"><?php echo $post->post_title; ?></h1>
+<h1 class="page-details-title"><?php echo $trv_h1_tieude; ?></h1>
 <?php
 /*
 * END Custom code

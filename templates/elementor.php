@@ -11,7 +11,7 @@ include EB_THEME_PLUGIN_INDEX . 'global/page_templates_top.php'; // do not remov
 /*
 * BEGIN Custom code
 */
-echo the_content();
+the_content();
 /*
 * END Custom code
 */

@@ -81,6 +81,7 @@ function EBE_get_list_file_install_echbay_core ( $dir, $arr_dir = array(), $arr_
 	}
 	
 	$arr = glob ( $dir . '/*' );
+//	$arr = EBE_get_file_in_folder ( $dir . '/' );
 //	print_r( $arr );
 	
 	//

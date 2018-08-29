@@ -5,6 +5,14 @@
 */
 
 
+
+
+include EB_THEME_URL . 'install_function.php';
+
+
+
+
+
 function WGR_install_load_form_get_ftp_account( $ftp_server, $ftp_user_name, $ftp_user_pass, $error_text = 'Set FTP account!' ) {
 	
 ?>
@@ -74,37 +82,6 @@ function WGR_install_sync_path_for_download ( $a, $b ) {
 }
 
 
-function EBE_get_list_file_install_echbay_core ( $dir, $arr_dir = array(), $arr_file = array() ) {
-	
-	if ( substr( $dir, -1 ) == '/' ) {
-		$dir = substr( $dir, 0, -1 );
-	}
-	
-	$arr = glob ( $dir . '/*' );
-//	$arr = EBE_get_file_in_folder ( $dir . '/' );
-//	print_r( $arr );
-	
-	//
-	foreach ( $arr as $v ) {
-		if ( is_dir( $v ) ) {
-			$arr_dir[] = $v;
-			
-			$a = EBE_get_list_file_install_echbay_core( $v, $arr_dir, $arr_file );
-			$arr_dir += $a[0];
-			$arr_file += $a[1];
-		}
-		else if ( is_file( $v ) ) {
-			$arr_file[] = $v;
-		}
-	}
-	
-	return array(
-		$arr_dir,
-		$arr_file
-	);
-}
-
-
 // URL download
 $url_for_download_ebdotcom = 'https://github.com/itvn9online/echbaydotcom/archive/master.zip';
 //echo $url_for_download_ebdotcom . '<br>' . "\n";
@@ -112,20 +89,8 @@ $url_for_download_ebdotcom = 'https://github.com/itvn9online/echbaydotcom/archiv
 // URL download (server 2)
 $url2_for_download_ebdotcom = 'http://api.echbay.com/daoloat/echbaydotcom.zip';
 
-// Download path
-$arr_upload_path = wp_upload_dir();
-//print_r( $arr_upload_path );
-
 // Save to
-$dir_for_save_file = $arr_upload_path['basedir'] . '/ebcache';
-//echo $dir_for_save_file . '<br>' . "\n";
-if ( ! is_dir( $dir_for_save_file ) ) {
-	if ( ! mkdir($dir_for_save_file, 0777) ) {
-		echo '<!-- ERROR create dir cache: ' . $dir_for_save_file . ' -->';
-		return false;
-	}
-	chmod($dir_for_save_file, 0777) or die('ERROR chmod dir: ' . $dir_for_save_file);
-}
+$dir_for_save_file = EBE_install_get_dir_upload_and_save();
 $dir_for_save_dir = $dir_for_save_file . '/echbaydotcom';
 $dir_for_save_master_dir = $dir_for_save_dir . '-master';
 
@@ -140,72 +105,16 @@ if ( is_dir( $dir_for_save_dir ) || is_dir( $dir_for_save_master_dir ) ) {
 else {
 	
 	// download if file not exist
-	if ( ! file_exists( $destination_path ) ) {
-		
-		// download in github (recommendation)
-		if ( copy( $url_for_download_ebdotcom, $destination_path ) ) {
-		}
-		// or download in echbay server
-		else if ( copy( $url2_for_download_ebdotcom, $destination_path ) ) {
-		}
-		else {
-			die('Could not download file for unzip!');
-		}
-		chmod( $destination_path, 0777 );
-		
-	}
-	
-	// re-check file download
-	if ( ! file_exists( $destination_path ) ) {
-		die('<h1>ERROR! download plugin echbaydotcom</h1>');
-	}
-	
-	// kết quả giải nén
-	$unzipfile = false;
-	
-	// using zip by php
-	if ( class_exists( 'ZipArchive' ) ) {
-		echo '<div>Using: <strong>ZipArchive</strong></div>'; 
-		
-		$zip = new ZipArchive;
-		if ($zip->open( $destination_path ) === TRUE) {
-			$zip->extractTo( $dir_for_save_file );
-			$zip->close();
-			
-			// unzip done
-			$unzipfile = true;
-		}
-	}
-	// using unzip by wordpress
-	else if ( function_exists('unzip_file') ) {
-		echo '<div>Using: <strong>unzip_file (wordpress)</strong></div>'; 
-		
-		$unzipfile = unzip_file( $destination_path, $dir_for_save_file );
-	}
-	else {
-		die('<div style="color:#f00;">Function or class unzip not exist. Check file in <strong>' . $destination_path . '</strong> and manual unzip.</div>');
-	}
-	
-	//
-	if ( $unzipfile == true ) {
-		echo '<div>Unzip to: <strong>' . $dir_for_save_file . '</strong></div>'; 
-	} else {
-		echo '<div>Do not unzip file, update faild!</div>';
-	}
-	
-	// remove file zip after unzip
-	if ( unlink( $destination_path ) ) {
-		echo '<div>Remove zip file for re-download!</div>';
-	}
+	EBE_install_download_and_save_file( $destination_path, $dir_for_save_file, $url_for_download_ebdotcom, $url2_for_download_ebdotcom );
 	
 }
 
 // re-check dir unzip
-// automatic unzip
+// automatic unzip -> trường hợp file download được unzip tự động
 if ( is_dir( $dir_for_save_master_dir ) ) {
 	$dir_for_save_dir = $dir_for_save_master_dir;
 }
-// manual unzip
+// manual unzip -> trường hợp lỗi không unzip được, và đã unzip thủ công
 else if ( is_dir( $dir_for_save_dir ) ) {
 	chmod($dir_for_save_dir, 0777) or die('ERROR chmod dir: ' . $dir_for_save_dir);
 	
@@ -416,7 +325,7 @@ else {
 //exit();
 
 
-// install file
+// install file -> chạy lại lần nữa cho chắc ăn -> trường hợp sử dụng FTP ở trên bị lỗi
 foreach ( $list_file_for_update_eb_core as $v ) {
 	$v2 = WGR_install_sync_path_for_download( $v, $dir_for_save_file );
 	

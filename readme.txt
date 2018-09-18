@@ -10,3 +10,9 @@ Theme này không phải là theme chạy độc lập, mà được chạy cùn
 https://github.com/itvn9online/echbaydotcom
 
 Các cập nhật khác liên quan đến plugin cũng sẽ được cập nhật tại phần hướng dẫn của plugin.
+
+
+
+=== CÁC THAY ĐỔI QUAN TRỌNG ===
+= Version 1.020 =
+* Hiển thị nội dung cho các page template để có thể sử dụng luôn, trường hợp muốn custom page thì chỉ việc copy và xóa phần đó đi là được.

@@ -3,7 +3,8 @@
 Template Name: All products
 Description: Sử dụng khi muốn tùy chỉnh URL trang liên hệ hoặc sử dụng các công cụ SEO khác
 */
-$act = basename(__FILE__, '.php'); // do not remove this code
+//$act = basename(__FILE__, '.php'); // do not remove this code
+$act = '';
 
 //
 include EB_THEME_PLUGIN_INDEX . 'global/page_templates_top.php'; // do not remove this code
@@ -18,10 +19,10 @@ the_content();
 */
 
 // get custom content
-$main_content = ob_get_contents();
+//$main_content = ob_get_contents();
 
 //
-ob_end_clean();
+//ob_end_clean();
 //echo $main_content;
 
 
@@ -31,9 +32,12 @@ include EB_THEME_PLUGIN_INDEX . 'global/products_list.php'; // do not remove thi
 
 
 
+//
+//ob_start();
 
-ob_start();
 
+//
+//echo 'aaaaaaaaaaaaaa';
 
 //
 echo $main_content;

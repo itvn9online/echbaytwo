@@ -11,6 +11,7 @@ include EB_THEME_PLUGIN_INDEX . 'global/page_templates_top.php'; // do not remov
 * BEGIN Custom code
 */
 ?>
+
 <h1 class="page-details-title"><?php echo $trv_h1_tieude; ?></h1>
 <div class="img-max-width l19 page-details-content ul-default-style">
 	<?php
@@ -25,3 +26,4 @@ the_content();
 
 //
 include EB_THEME_PLUGIN_INDEX . 'global/page_templates_footer.php'; // do not remove this code
+

@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: WGR Contact
+Template Name: WGR Booking done
 Description: Sử dụng khi muốn tùy chỉnh URL trang liên hệ hoặc sử dụng các công cụ SEO khác
 */
 $act = basename(__FILE__, '.php'); // do not remove this code
@@ -27,7 +27,7 @@ ob_end_clean();
 
 
 //
-include EB_THEME_PLUGIN_INDEX . 'global/contact.php'; // do not remove this code
+include EB_THEME_PLUGIN_INDEX . 'global/hoan-tat.php'; // do not remove this code
 
 
 

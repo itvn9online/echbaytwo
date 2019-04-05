@@ -10,9 +10,10 @@ define( 'EB_THEME_PLUGIN_INDEX', dirname ( dirname ( EB_THEME_URL ) ) . '/echbay
 //echo 'EB_THEME_PLUGIN_INDEX: ' . EB_THEME_PLUGIN_INDEX . '<br>';
 
 // download echbaydotcom plugin if not exist
-if ( ! is_dir( EB_THEME_PLUGIN_INDEX ) ) {
-	include EB_THEME_URL . 'install.php'; exit();
+//if ( ! is_dir( EB_THEME_PLUGIN_INDEX ) ) {
+if ( ! file_exists( EB_THEME_PLUGIN_INDEX . 'index.php' ) ) {
+	include EB_THEME_URL . 'install.php';
 }
-
-//
-include_once EB_THEME_PLUGIN_INDEX . 'index.php';
+else {
+	include_once EB_THEME_PLUGIN_INDEX . 'index.php';
+}

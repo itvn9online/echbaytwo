@@ -1,6 +1,6 @@
 <?php
 /*
-* Download echbaydotcom plguin in github
+* Download echbaydotcom plugin in github
 * Download URL: https://github.com/itvn9online/echbaydotcom/archive/master.zip
 */
 

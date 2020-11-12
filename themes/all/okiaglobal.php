@@ -10,7 +10,7 @@ $eb_all_themes_support["okiaglobal"] = array();
 $eb_all_themes_support["okiaglobal"]["name"] = "okiaglobal";
 $eb_all_themes_support["okiaglobal"]["screenshot"] = "https://img1.webgiare.org/okiaglobal.jpg";
 $eb_all_themes_support["okiaglobal"]["author"] = "";
-$eb_all_themes_support["okiaglobal"]["demo"] = "https://sankito.com/";
+$eb_all_themes_support["okiaglobal"]["demo"] = "themes.webgiare.org/sankito";
 $eb_all_themes_support["okiaglobal"]["price"] = 2500000;
 //
 $eb_all_themes_support["okiaglobal"]["top"][] = "okiaglobal-top1.php";

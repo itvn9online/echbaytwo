@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: For Widget Shortcode
+Template Name: For Widget Shortcode (hide title)
 */
 $act = basename( __FILE__, '.php' ); // do not remove this code
 
@@ -12,7 +12,6 @@ include EB_THEME_PLUGIN_INDEX . 'global/page_templates_top.php'; // do not remov
  */
 ?>
 <div class="main-widget-shortcode">
-	<h1 class="page-details-title"><?php echo $trv_h1_tieude; ?></h1>
 	<div class="img-max-width l19 for-widget-shortcode">
 		<?php
 		the_post();

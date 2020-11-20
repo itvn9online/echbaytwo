@@ -7,6 +7,10 @@ $act = basename( __FILE__, '.php' ); // do not remove this code
 //
 include EB_THEME_PLUGIN_INDEX . 'global/page_templates_top.php'; // do not remove this code
 
+// tách chức năng kiểm tra category in list ra đây để gọi cho đỡ bị trùng lặp
+include_once EB_THEME_PLUGIN_INDEX . 'common_category_list.php';
+
+
 /*
  * BEGIN Custom code
  */

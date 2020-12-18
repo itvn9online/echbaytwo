@@ -7,7 +7,7 @@ $act = basename(__FILE__, '.php'); // do not remove this code
 
 //
 function EBE_wgr_demo_register_scripts () {
-	$d = dirname( __FILE__ ) . '/';
+	$d = __DIR__ . '/';
 	
 	wp_register_style( 'hide-top-footer', str_replace( ABSPATH, web_link, $d ) . 'hide-top-footer.css', array(), filemtime( $d . 'hide-top-footer.css' ) );
 	

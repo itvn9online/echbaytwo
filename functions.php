@@ -14,5 +14,6 @@ define( 'EB_THEME_PLUGIN_INDEX', dirname( dirname( EB_THEME_URL ) ) . '/echbaydo
 if ( !file_exists( EB_THEME_PLUGIN_INDEX . 'index.php' ) ) {
     include EB_THEME_URL . 'install.php';
 } else {
+    //echo __FILE__ . '<br>' . "\n";
     include_once EB_THEME_PLUGIN_INDEX . 'index.php';
 }

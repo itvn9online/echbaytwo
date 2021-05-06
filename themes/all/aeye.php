@@ -12,6 +12,7 @@ $eb_all_themes_support[$eb_all_themes_name]["name"] = $eb_all_themes_name;
 $eb_all_themes_support[$eb_all_themes_name]["screenshot"] = "https://img1.webgiare.org/aeye.jpg";
 $eb_all_themes_support[$eb_all_themes_name]["author"] = "";
 $eb_all_themes_support[$eb_all_themes_name]["demo"] = "themes.webgiare.org/aeye";
+$eb_all_themes_support[$eb_all_themes_name]["tags"] = "ladingpage";
 $eb_all_themes_support[$eb_all_themes_name]["price"] = 80000;
 //
 $eb_all_themes_support[$eb_all_themes_name]["top"][] = "aeye-top1.php";

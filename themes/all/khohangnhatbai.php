@@ -11,8 +11,9 @@ $eb_all_themes_support[$eb_all_themes_name] = array();
 $eb_all_themes_support[$eb_all_themes_name]["name"] = $eb_all_themes_name;
 $eb_all_themes_support[$eb_all_themes_name]["screenshot"] = "https://img1.webgiare.org/khohangnhatbai.jpg";
 $eb_all_themes_support[$eb_all_themes_name]["author"] = "";
-$eb_all_themes_support[$eb_all_themes_name]["demo"] = "";
-$eb_all_themes_support[$eb_all_themes_name]["price"] = 4500000;
+$eb_all_themes_support[$eb_all_themes_name]["demo"] = "themes.webgiare.org/khohangnhatbai";
+$eb_all_themes_support[$eb_all_themes_name]["tags"] = "website, shop, e-commerce";
+$eb_all_themes_support[$eb_all_themes_name]["price"] = 200000;
 //
 $eb_all_themes_support[$eb_all_themes_name]["top"][] = "khohangnhatbai-top1.php";
 $eb_all_themes_support[$eb_all_themes_name]["top"][] = "top_widget.php";
@@ -41,4 +42,3 @@ $eb_all_themes_support[$eb_all_themes_name]["home"][] = "home_widget.php";
 $eb_all_themes_support[$eb_all_themes_name]["threaddetails"][] = "khohangnhatbai-threaddetails.html";
 //
 $eb_all_themes_support[$eb_all_themes_name]["threadnode"][] = "khohangnhatbai-threadnode.html";
-

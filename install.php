@@ -7,7 +7,7 @@
 
 
 
-include EB_THEME_URL . 'install_function.php';
+include __DIR__ . '/install_function.php';
 
 
 

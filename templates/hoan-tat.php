@@ -6,6 +6,9 @@ Description: Sử dụng khi muốn tùy chỉnh URL trang liên hệ hoặc s�
 $act = basename(__FILE__, '.php'); // do not remove this code
 
 //
+define( 'WGR_NO_CACHE', true );
+
+//
 include EB_THEME_PLUGIN_INDEX . 'global/page_templates_top.php'; // do not remove this code
 
 /*

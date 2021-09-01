@@ -1,2 +1,5 @@
 # Danh sách đối tác phân phối code
-Các đối tác cùng phân phối code sẽ được liệt kê vào đây, mỗi khi cần update theme gốc cho đối tác, chỉ cần copy bộ code từ echbaytwo sau đó copy các file trong thư mục `partner` tương ứng và cho ra ngoài để thay thế các file gốc là được.
+### Các đối tác cùng phân phối code sẽ được liệt kê vào đây:
+- Up theme echbaytwo lên host của khách.
+- Đổi tên theme thành partner tương ứng.
+- Kích hoạt theme để sử dụng.

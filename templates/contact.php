@@ -3,6 +3,11 @@
 Template Name: WGR Contact
 Description: Sử dụng khi muốn tùy chỉnh URL trang liên hệ hoặc sử dụng các công cụ SEO khác
 */
+
+// trang nào KHÔNG cho phép cache thì thêm dòng này
+define( 'HAS_USING_EBCACHE', false );
+
+//
 $act = basename( __FILE__, '.php' ); // do not remove this code
 
 //

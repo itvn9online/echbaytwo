@@ -3,6 +3,11 @@
 Template Name: For Elementor 1024px
 Description: Page template for Elementor Page Builder plugin (width and max-width 999px)
 */
+
+// trang nào cho phép cache thì thêm dòng này
+define( 'HAS_USING_EBCACHE', true );
+
+//
 $act = basename(__FILE__, '.php'); // do not remove this code
 
 // fixed size for page

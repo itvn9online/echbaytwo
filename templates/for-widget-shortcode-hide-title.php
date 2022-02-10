@@ -2,6 +2,11 @@
 /*
 Template Name: For Widget Shortcode (hide title)
 */
+
+// trang nào cho phép cache thì thêm dòng này
+define( 'HAS_USING_EBCACHE', true );
+
+//
 $act = basename( __FILE__, '.php' ); // do not remove this code
 
 //
@@ -16,12 +21,12 @@ include_once EB_THEME_PLUGIN_INDEX . 'common_category_list.php';
  */
 ?>
 <div class="main-widget-shortcode">
-	<div class="img-max-width l19 for-widget-shortcode">
-		<?php
-		the_post();
-		the_content();
-		?>
-	</div>
+    <div class="img-max-width l19 for-widget-shortcode">
+        <?php
+        the_post();
+        the_content();
+        ?>
+    </div>
 </div>
 <?php
 /*
